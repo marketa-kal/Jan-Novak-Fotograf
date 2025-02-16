@@ -1,0 +1,195 @@
+/* COLORS OVERVIEW
+Main color: #2C3E50 (Dark Blue) – headings and important elements
+Secondary color: #AF151C (Red) – buttons and highlights
+Background: #ECF0F1 (Light Gray) – for section backgrounds
+Text color: #2C3E50 (Dark Blue) – for main text
+White: #FFFFFF – for text in sections with dark background */
+
+/* FONTS OVERVIEW
+Headings: font-family: "Montserrat", sans-serif;
+Body text: font-family: "Open Sans", sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1em;
+}
+
+body {
+    max-width: 100%;
+    background-color: #ECF0F1;
+    color: #2C3E50;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =============== Header =============== */
+
+.hero h1,
+.hero h2 {
+    padding: 0;
+}
+
+.hero {
+    background-color: #2C3E50;
+    color: white;
+}
+
+.hero img {
+    max-width: 50%;
+    margin-bottom: -5%;
+}
+
+nav {
+    background-color: #AF151C;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    font-style: italic;
+    padding: 0 1rem;
+}
+
+nav a:active {
+    color: #2C3E50;
+    background-color: #ECF0F1;
+}
+
+/* =============== Main =============== */
+main {
+    padding: 0 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    padding: 2.5rem 0 1rem 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.17rem;
+    padding-top: 1rem;
+}
+
+/* =============== About =============== */
+
+.about img {
+    max-width: 40%;
+    border-radius: 50%;
+    float: left;
+    margin: 1rem 1.5rem 0 1rem;
+}
+
+.about p {
+    text-align: left;
+}
+
+@media (min-width: 541px) {
+    .about-content-wrapper {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 541px) {
+    .about-content-wrapper img {
+        float: none;
+        width: 35%;
+        border-radius: 50%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 541px) {
+.about p {
+    padding-left: 2rem;
+}
+}
+
+/* =============== Gallery =============== */
+
+.gallery {
+    clear: both;
+}
+
+.gallery-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1%;
+}
+
+.gallery-photos img {
+    width: 100%;
+}
+
+
+/* =============== Pricing =============== */
+
+.pricing table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.pricing table .price {
+    text-align: right;
+    padding-left: 2rem;
+}
+
+.pricing table .product {
+    text-align: left;
+}
+
+.pricing tr {
+    border-bottom: 1px solid #2C3E50;
+}
+
+.pricing th,
+.pricing td {
+    padding-top: 0.5rem;
+}
+
+/* =============== Contact =============== */
+
+.contact h4 {
+    padding-top: 0;
+}
+
+.contact a {
+    text-decoration: underline;
+    color: #2C3E50;
+}
+
+
+/* =============== Footer =============== */
+
+footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+}
