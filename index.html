@@ -1,119 +1,223 @@
-<!DOCTYPE html>
-<html lang="cs">
+/* COLORS OVERVIEW
+Main color: #2C3E50 (Dark Blue) – headings and important elements
+Secondary color: #AF151C (Red) – buttons and highlights
+Background: #ECF0F1 (Light Gray) – for section backgrounds
+Text color: #2C3E50 (Dark Blue) – for main text
+White: #FFFFFF – for text in sections with dark background */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotograf</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-</head>
+/* FONTS OVERVIEW
+Headings: font-family: "Montserrat", sans-serif;
+Body text: font-family: "Open Sans", sans-serif; */
 
-<body>
-    <!-- Header -->
-    <header>
-        <!-- Hero section -->
-        <section class="hero">
-            <div>
-                <p>Momentky,<br>které vyprávějí příběhy</p>
-                <h1>Jan Novák</h1>
-            </div>
-            <img src="images/logo.png" alt="logo" width="500" height="500">
-        </section>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <!-- Menu -->
-        <nav>
-            <a href="#about">O mně</a>
-            <a href="#gallery">Galerie</a>
-            <a href="#pricing">Ceník</a>
-            <a href="#contact">Kontakt</a>
-        </nav>
-    </header>
+html {
+    font-size: 1em;
+}
 
-    <!-- Main -->
-    <main>
-        <!-- About -->
-        <section class="about" id="about">
-            <h2>O mně</h2>
-            <div class="about-content-wrapper">
-                <img src="images/img-jan-novak.jpg" alt="Fotografie Jana Nováka" width="1024" height="1024">
-                <p>
-                    Jsem profesionální fotograf s více než 10 lety zkušeností. Specializuji se na portrétní a
-                    krajinářskou fotografii. Moje práce je pro mě vášní a každý snímek tvořím s láskou a péčí. Rád
-                    zachycuji jedinečné okamžiky, které zůstanou navždy ve vašich vzpomínkách.
-                </p>
-            </div>
-        </section>
+body {
+    width: 100%;
+    background-color: #ECF0F1;
+    color: #2C3E50;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5;
+}
 
-        <!-- Gallery -->
-        <section class="gallery" id="gallery">
-            <h2>Moje práce</h2>
-            <div class="gallery-photos">
-                <img src="images/img1.jpg" alt="Fotografie přírody" width="1024" height="1024">
-                <img src="images/img10.jpg" alt="Fotografie africké dívky" width="1024" height="1024">
-                <img src="images/img17.jpg" alt="Fotografie Diamond Beach" width="1024" height="1024">
-                <img src="images/img19.jpg" alt="Fotografie zimní scenérie" width="1024" height="1024">
-                <img src="images/img23.jpg" alt="Portrétová fotografie mladé ženy" width="1024" height="1024">
-                <img src="images/img24.jpg" alt="Fotografie bežící holčičky" width="1024" height="1024">
-                <img src="images/img26.jpg" alt="Fotografie horské jezerní scenérie" width="1024" height="1024">
-                <img src="images/img6.jpg" alt="Makrofotografie" width="1024" height="1024">
-                <img src="images/img9.jpg" alt="Fotografie exotické ulice" width="1024" height="1024">
-            </div>
-        </section>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero p,
+.contact p {
+    font-family: "Montserrat", sans-serif;
+}
 
-        <!-- Pricing -->
-        <section class="pricing" id="pricing">
-            <h2>Ceník</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Služba</th>
-                        <th>Cena</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="product">Krajinářská fotografie</td>
-                        <td class="price">1&nbsp;500&nbsp;Kč</td>
-                    </tr>
-                    <tr>
-                        <td class="product">Rodinná fotografie</td>
-                        <td class="price">2&nbsp;500&nbsp;Kč</td>
-                    </tr>
-                    <tr>
-                        <td class="product">Svatební fotografie</td>
-                        <td class="price">10&nbsp;000&nbsp;Kč</td>
-                    </tr>
-                    <tr>
-                        <td class="product">Portrétní fotografie</td>
-                        <td class="price">5000&nbsp;Kč</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+h1 {
+    font-size: clamp(2rem, 10vw, 5rem);
+    text-align: left;
+}
 
-        <!-- Contact -->
-        <section class="contact" id="contact">
-            <h2>Kontakt</h2>
-            <p>Máte zájem o spolupráci?<br>Neváhejte mě kontaktovat!</p>
-            <p>
-                Telefon: <a href="tel:+420123456789">+420 123 456 789</a><br>
-                Email: <a href="mailto:jan.novak@fotograf.cz">jan.novak@fotograf.cz</a>
-            </p>
-        </section>
+h2 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
 
-    </main>
+section {
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =============== Header =============== */
+
+header {
+    width: 100%;
+    background-color: #2C3E50;
+    color: white;
+    line-height: 1.3;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    align-items: stretch;
+    padding: 5%;
+}
+
+.hero p {
+    font-size: clamp(0.5rem, 2.5vw, 1.25rem);
+    font-weight: 400;
+    text-align: left;
+}
+
+.hero img {
+    width: 15%;
+    height: auto;
+    object-fit: contain;
+}
+
+nav {
+    background-color: #AF151C;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    font-style: italic;
+    padding: 0 1rem;
+}
+
+nav a:active {
+    color: #2C3E50;
+    background-color: #ECF0F1;
+}
+
+/* @media (min-width: 481px) {
+    nav a {
+        padding: 0.8% 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    nav a {
+        padding: 0.8% 1rem;
+    }
+} */
+
+/* =============== Main =============== */
+
+main {
+    background-color: #ECF0F1;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =============== About =============== */
+
+.about-content-wrapper {
+    display: flow-root;
+}
+
+.about-content-wrapper img {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1rem;
+}
+
+.about p {
+    text-align: left;
+}
+
+/* ======================= Gallery ========================= */
+
+.gallery-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+}
+
+.gallery-photos img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 440px) {
+    .gallery-photos img:last-child {
+        display: none;
+    }
+}
+
+@media (min-width: 648px) {
+    .gallery-photos img:last-child {
+        display: grid;
+    }
+}
+
+@media (min-width: 856px) {
+    .gallery-photos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =============== Pricing =============== */
+
+.pricing table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.pricing table .price {
+    text-align: right;
+    padding-left: 2rem;
+}
+
+.pricing table .product {
+    text-align: left;
+}
+
+.pricing tr {
+    border-bottom: 1px solid #2C3E50;
+}
+
+.pricing th,
+.pricing td {
+    padding-top: 0.5rem;
+}
+
+/* =============== Contact =============== */
+
+.contact p:first-of-type {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contact a {
+    text-decoration: underline;
+    color: #2C3E50;
+}
 
 
-    <!-- Footer -->
-    <footer>
-        © 2023 Jan Novák. Všechna práva vyhrazena.
-    </footer>
+/* =============== Footer =============== */
 
-</body>
-
-</html>
+footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 1rem;
+    font-size: 0.7rem;
+}
