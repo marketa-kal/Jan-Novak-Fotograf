@@ -50,7 +50,7 @@ h2 {
 }
 
 section {
-    padding: 2rem 1rem 1rem 1rem;
+    padding: clamp(1.5rem, 8vw, 5rem);
 }
 
 a {
@@ -109,6 +109,7 @@ nav a:active {
 }
 
 @media (min-width: 1024px) {
+
     nav a:hover,
     nav a:focus,
     nav a:active {
@@ -141,6 +142,31 @@ main {
 
 .about p {
     text-align: left;
+}
+
+@media (min-width: 530px) {
+    .about-content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 530px) {
+    .about-content-wrapper img {
+        margin: 0;
+        width: 30%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+
+@media (min-width: 530px) {
+    .about-content-wrapper p {
+        padding: 0 7vw;
+        line-height: 2;
+    }
 }
 
 /* ======================= Gallery ========================= */
