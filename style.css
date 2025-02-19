@@ -75,7 +75,7 @@ header {
 }
 
 .hero p {
-    font-size: clamp(0.5rem, 2.5vw, 1.25rem);
+    font-size: clamp(0.75rem, 2.5vw, 1.25rem);
     font-weight: 400;
     text-align: left;
 }
@@ -96,7 +96,11 @@ nav {
 nav a {
     color: white;
     font-style: italic;
-    padding: 0 1rem;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 nav a:active {
@@ -104,17 +108,14 @@ nav a:active {
     background-color: #ECF0F1;
 }
 
-/* @media (min-width: 481px) {
-    nav a {
-        padding: 0.8% 1rem;
+@media (min-width: 1024px) {
+    nav a:hover,
+    nav a:focus,
+    nav a:active {
+        background-color: #ECF0F1;
+        color: #2C3E50;
     }
 }
-
-@media (min-width: 768px) {
-    nav a {
-        padding: 0.8% 1rem;
-    }
-} */
 
 /* =============== Main =============== */
 
