@@ -95,7 +95,7 @@ header {
 
 nav {
     background-color: #AF151C;
-    padding-inline: 2rem;
+    padding-inline: 1.5rem;
 }
 
 .nav-items {
@@ -108,7 +108,7 @@ nav a {
     color: white;
     font-style: italic;
     font-size: clamp(1rem, 2.5vw, 1.3rem);
-    padding-block: 2px;
+    padding: 2px 8px;
 }
 
 nav a:active {
@@ -131,7 +131,7 @@ nav a:active {
 main {
     background-color: #ECF0F1;
     max-width: 1200px;
-    padding-inline: 2rem;
+    padding-inline: 1.5rem;
     margin: auto;
 }
 
